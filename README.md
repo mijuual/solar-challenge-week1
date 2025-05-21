@@ -1,82 +1,100 @@
 # MoonLight Energy Solutions: Solar Investment Strategy Analysis
 
 # Project Overview
-MoonLight Energy Solutions aims to enhance its operational efficiency and sustainability by investing in solar energy solutions. As an Analytics Engineer, the goal is to analyze environmental data from various regions and produce insights that will help identify high-potential areas for solar installations. The analysis focuses on data quality checks, cleaning techniques, exploratory data analysis (EDA), and cross-country comparisons for countries: Benin, Sierra Leone, and Togo.
+MoonLight Energy Solutions aims to enhance its operational efficiency and sustainability by investing in solar energy solutions. As an Analytics Engineer, the objective is to analyze environmental data from multiple regions and generate insights to identify high-potential areas for solar installations. The project involves data quality checks, cleaning techniques, exploratory data analysis (EDA), and a cross-country comparison covering Benin, Sierra Leone, and Togo.
 
 # Contributions
 
 ## Git & Environment Setup:
+Set up Git and created multiple branches to manage tasks efficiently.
 
-Set up the Git environment and created multiple branches for efficient version control.
+Configured .gitignore to exclude unnecessary files (e.g., .venv) from version control.
 
-Configured .gitignore to exclude irrelevant files (e.g., .venv) from version control.
+Resolved branch merge conflicts by learning and applying proper Git workflows.
 
-Faced challenges with merging branches due to misunderstandings, but resolved them by learning the correct Git workflow and successfully merging eda-benin-branch into the default setup-branch.
+## Data Profiling, Cleaning, and EDA:
 
-## Data Profiling, Cleaning, and EDA for Benin:
+### Common Steps Across All Countries:
 
 Data Quality Checks: Identified missing values, negative readings, and statistical outliers using Z-scores.
 
-### Data Cleaning:
+Data Cleaning: Imputed missing or negative values in DHI, DNI, GHI with medians. Applied Z-score to detect outliers in selected columns and replaced them with median values to ensure data consistency.
 
-* Replaced extreme outliers with median values.
+## EDA Visualizations:
 
-* Handled missing values in the data through appropriate imputation.
+Line plots for temporal trends in irradiance, temperature, and wind speed.
 
-### Exploratory Data Analysis (EDA):
+Scatter plots to explore relationships between key weather parameters.
 
-* Created a variety of visualizations, such as:
+Heatmaps to identify correlations.
 
-* Line plots for temporal trends in irradiance, temperature, and wind.
+Bubble charts to assess the relationship between GHI, temperature, and relative humidity.
 
-* Scatter plots for relationships between different weather parameters.
+## Country-Specific Work:
 
-* Heatmaps to identify correlations.
+Benin: Initial focus of the analysis; full EDA and cleaning pipeline implemented.
 
-* Bubble charts to visualize the relationship between GHI, temperature, and relative humidity.
+Sierra Leone & Togo: Applied the same data profiling and EDA workflow to understand their respective solar potential.
 
-## Cross-Country Comparison (Benin, Sierra Leone, Togo):
+## Cross-Country Comparison:
 
-* Plans to continue performing EDA for Sierra Leone and Togo.
+Performed comparative analysis across Benin, Sierra Leone, and Togo using key solar metrics:
+
+* Global Horizontal Irradiance (GHI)
+
+* Direct Normal Irradiance (DNI)
+
+* Diffuse Horizontal Irradiance (DHI)
+
+Created a summary table presenting the mean, median, and standard deviation for each irradiance metric by country.
+
+Used statistical hypothesis testing (p-values) to determine whether differences in irradiance distributions across countries are statistically significant.
+
+### Insights drawn:
+
+- Benin has the highest average and median GHI and DNI, suggesting it receives the most consistent and intense solar radiation — making it a strong candidate for solar installations.
+
+- Sierra Leone shows a higher average and median DHI than the other countries, which may indicate more diffuse (scattered) sunlight due to cloud cover 
+
+- Togo has relatively high GHI, but very low median DNI, suggesting that direct sunlight is more inconsistent 
 
 # Implementation Process
 
 ## Git Setup:
+Created a structured Git repository with clear branching per task (e.g., setup-branch, eda-benin-branch, etc.).
 
-* Created a Git repository for version control.
+Used .gitignore to streamline the repository and prevent tracking of unnecessary files.
 
-* Set up different branches for different tasks (e.g., setup-branch, eda-benin-branch).
+## Data Preparation:
+Conducted thorough inspection of raw environmental data to identify inconsistencies such as missing values and negative readings.
 
-* Used .gitignore to prevent unnecessary files from being committed to the repository.
+### Initial Imputation:
 
-## Data Quality Checks & Cleaning:
+For irradiance-related columns (DHI, DNI, GHI), which cannot have negative values, missing or invalid values were imputed using the column-wise median.
 
-Performed data profiling by inspecting the raw data for inconsistencies, such as missing values and unrealistic negative values.
+### Outlier Treatment:
 
-Applied Z-score method to identify outliers and replaced them with the median value.
+Applied the Z-score method to selected numerical columns to detect statistical outliers.
 
-Imputed missing values based on column medians for the solar irradiance data.
+Detected outliers were replaced with the respective column's median to reduce the impact of extreme values while preserving overall data integrity.
 
-## Exploratory Data Analysis (EDA):
+## Exploratory Data Analysis:
+Visualized environmental data to understand temporal and spatial trends.
 
-Visualized the data using various types of plots (e.g., line plots, scatter plots, heatmaps).
+Used visualization techniques to uncover actionable patterns in irradiance, temperature, and other variables.
 
-Identified key trends in the data, such as solar irradiance patterns, temperature behavior, and humidity levels.
+Developed a structured EDA pipeline that was consistently applied to each country.
 
-Focused on creating actionable insights that would support the company's strategy for solar investments.
+## Cross-Country Insights:
+Compared solar-related metrics to assess which country offers optimal conditions.
 
-Cross-Country Analysis:
+Synthesized insights into solar energy potential for strategic decision-making.
 
-Focused on Benin first, and will proceed with Sierra Leone and Togo.
+# Future Plans
 
-The goal is to compare solar radiation, temperature, and other key metrics across these countries to determine which areas offer the best potential for solar investment.
+EDA Expansion: Continue refining the analysis with additional weather and solar variables for greater granularity.
 
-## Future Plans
-EDA for Sierra Leone & Togo: Complete the EDA for the remaining countries.
-
-Cross-Country Comparison: After completing the analysis for all three countries, compare key metrics across Benin, Sierra Leone, and Togo, providing actionable insights for the solar investment strategy.
-
-Strategic Recommendations: Use the findings to create a report with a strategic approach for identifying high-potential regions for solar installation, aligned with the company's sustainability goals.
+Streamlit Dashboard: Develop an interactive dashboard using Streamlit to allow stakeholders to explore solar metrics (GHI, DNI, DHI), comparisons, and visualizations dynamically.
 
 # Technologies Used
 
@@ -86,8 +104,7 @@ Pandas: For data manipulation and cleaning.
 
 Matplotlib & Seaborn: For data visualization and EDA.
 
-Jupyter Notebooks: For interactive analysis and documentation.
+Jupyter Notebooks: For interactive exploration and documentation.
 
 # Conclusion
-
-This project provides an essential foundation for MoonLight Energy Solutions to make informed decisions on solar investments by leveraging data analytics. The process followed so far has been effective in cleaning and analyzing the Benin dataset, and we are confident that the analysis for the other countries will provide equally valuable insights.
+This project lays a strong analytical foundation for MoonLight Energy Solutions to drive data-informed solar energy investments. With comprehensive EDA completed for Benin, Sierra Leone, and Togo, and a comparative analysis providing cross-country insights, the company is well-positioned to make impactful, sustainability-focused decisions on where to deploy solar infrastructure.
