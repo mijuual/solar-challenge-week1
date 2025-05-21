@@ -1,11 +1,11 @@
-### MoonLight Energy Solutions: Solar Investment Strategy Analysis
+# MoonLight Energy Solutions: Solar Investment Strategy Analysis
 
-## Project Overview
+# Project Overview
 MoonLight Energy Solutions aims to enhance its operational efficiency and sustainability by investing in solar energy solutions. As an Analytics Engineer, the goal is to analyze environmental data from various regions and produce insights that will help identify high-potential areas for solar installations. The analysis focuses on data quality checks, cleaning techniques, exploratory data analysis (EDA), and cross-country comparisons for countries: Benin, Sierra Leone, and Togo.
 
-## Contributions
+# Contributions
 
-# Git & Environment Setup:
+## Git & Environment Setup:
 
 Set up the Git environment and created multiple branches for efficient version control.
 
@@ -13,17 +13,17 @@ Configured .gitignore to exclude irrelevant files (e.g., .venv) from version con
 
 Faced challenges with merging branches due to misunderstandings, but resolved them by learning the correct Git workflow and successfully merging eda-benin-branch into the default setup-branch.
 
-# Data Profiling, Cleaning, and EDA for Benin:
+## Data Profiling, Cleaning, and EDA for Benin:
 
 Data Quality Checks: Identified missing values, negative readings, and statistical outliers using Z-scores.
 
-# Data Cleaning:
+### Data Cleaning:
 
 * Replaced extreme outliers with median values.
 
 * Handled missing values in the data through appropriate imputation.
 
-# Exploratory Data Analysis (EDA):
+### Exploratory Data Analysis (EDA):
 
 * Created a variety of visualizations, such as:
 
@@ -35,13 +35,13 @@ Data Quality Checks: Identified missing values, negative readings, and statistic
 
 * Bubble charts to visualize the relationship between GHI, temperature, and relative humidity.
 
-# Cross-Country Comparison (Benin, Sierra Leone, Togo):
+## Cross-Country Comparison (Benin, Sierra Leone, Togo):
 
 * Plans to continue performing EDA for Sierra Leone and Togo.
 
-## Implementation Process
+# Implementation Process
 
-# Git Setup:
+## Git Setup:
 
 * Created a Git repository for version control.
 
@@ -49,7 +49,7 @@ Data Quality Checks: Identified missing values, negative readings, and statistic
 
 * Used .gitignore to prevent unnecessary files from being committed to the repository.
 
-# Data Quality Checks & Cleaning:
+## Data Quality Checks & Cleaning:
 
 Performed data profiling by inspecting the raw data for inconsistencies, such as missing values and unrealistic negative values.
 
@@ -57,7 +57,7 @@ Applied Z-score method to identify outliers and replaced them with the median va
 
 Imputed missing values based on column medians for the solar irradiance data.
 
-# Exploratory Data Analysis (EDA):
+## Exploratory Data Analysis (EDA):
 
 Visualized the data using various types of plots (e.g., line plots, scatter plots, heatmaps).
 
@@ -78,7 +78,7 @@ Cross-Country Comparison: After completing the analysis for all three countries,
 
 Strategic Recommendations: Use the findings to create a report with a strategic approach for identifying high-potential regions for solar installation, aligned with the company's sustainability goals.
 
-## Technologies Used
+# Technologies Used
 
 Git & GitHub: For version control and collaboration.
 
@@ -88,6 +88,6 @@ Matplotlib & Seaborn: For data visualization and EDA.
 
 Jupyter Notebooks: For interactive analysis and documentation.
 
-## Conclusion
+# Conclusion
 
 This project provides an essential foundation for MoonLight Energy Solutions to make informed decisions on solar investments by leveraging data analytics. The process followed so far has been effective in cleaning and analyzing the Benin dataset, and we are confident that the analysis for the other countries will provide equally valuable insights.
